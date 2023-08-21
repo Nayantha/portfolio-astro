@@ -18,10 +18,16 @@ import "../styles/reset.css"
     <title>{title}</title>
 </head>
 <body>
-<main>
-    <Navbar/>
-    <slot/>
-    <!-- all different pages rendered here -->
-</main>
+<Navbar/>
+<slot/>
+<!-- all different pages rendered here -->
 </body>
 </html>
+<style>
+    body {
+        height: 100vh;
+        display: grid;
+        /*place-items: center;*/
+        grid-template-rows: auto 1fr auto;
+    }
+</style>
