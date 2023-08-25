@@ -7,14 +7,14 @@ function changeHamburgerMenuState(element) {
         case "false":
             for (let i = 0; i < polyLineArray.length; i++) {
                 polyLineArray[i].classList.remove("normal-state")
-                polyLineArray[i].classList.add("st2")
+                polyLineArray[i].classList.add("clicked-state")
             }
             element.dataset.clicked = true.toString()
             break
         case "true":
             for (let i = 0; i < polyLineArray.length; i++) {
                 polyLineArray[i].classList.add("normal-state")
-                polyLineArray[i].classList.remove("st2")
+                polyLineArray[i].classList.remove("clicked-state")
             }
             element.dataset.clicked = false.toString()
     }
