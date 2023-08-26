@@ -8,7 +8,7 @@ import {Astronav, MenuItems, MenuIcon} from "astro-navbar"
             <div>
                 <img src={avatar} alt="avatar.png">
             </div>
-            <h1 class="text-lg font-bold"><a href="./">Hua.</a></h1>
+            <h1 class="text-lg font-bold relative text-white"><a href="./">Hua.</a></h1>
             <MenuIcon class="w-8 h-8 text-gray-800"/>
             <!--<div class="space-y-1">
                 <span class="block h-0.5 w-8 bg-black"></span>
@@ -18,3 +18,18 @@ import {Astronav, MenuItems, MenuIcon} from "astro-navbar"
         </div>
     </Astronav>
 </nav>
+<style>
+    nav h1:after {
+        --border-bottom-radius: 25px;
+        position: absolute;
+        content: "";
+        background-color: black;
+        width: 20rem;
+        height: 4rem;
+        top: -1rem;
+        left: -9rem;
+        z-index: -1;
+        border-bottom-left-radius: var(--border-bottom-radius);
+        border-bottom-right-radius: var(--border-bottom-radius);
+    }
+</style>
