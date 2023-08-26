@@ -6,11 +6,19 @@ import {Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu}
     <svg width="250" height={4} viewBox="0 0 250 4" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M2 2L450 2" stroke="#282828" stroke-linecap="round"/>
     </svg>
-    <div class="flex justify-between align-center align">
-        <div><img src={avatar} alt="avatar.png"></div>
+    <div>
+        <img src={avatar} alt="avatar.png">
         <h1><a href="./">Hua.</a></h1>
+    </div>
+    <div class="flex justify-between">
+        <a>Your Logo</a>
         <MenuIcon class="w-4 h-4 text-gray-800"/>
     </div>
+    <!--
+    // add `hidden` class by default for mobile
+    // `lg:flex` is to make it visible in desktop
+    // You may use custom CSS instead.
+    -->
     <MenuItems class="hidden lg:flex">
         <ul>
             <li>Home</li>
@@ -19,6 +27,7 @@ import {Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu}
                 <Dropdown class="group">
                     <button>
                         <span> Services </span>
+                        <!-- You can style when dropdown is `open` -->
                         <svg class="group-open:rotate-180">...arrow..</svg>
                     </button>
                     <DropdownItems>
@@ -45,4 +54,3 @@ import {Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu}
         </ul>
     </MenuItems>
 </Astronav>
-
