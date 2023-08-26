@@ -2,7 +2,7 @@
 import avatar from "/avatar.png"
 import {Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu} from "astro-navbar"
 ---
-<nav>
+<Astronav>
     <svg width="250" height={4} viewBox="0 0 250 4" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M2 2L450 2" stroke="#282828" stroke-linecap="round"/>
     </svg>
@@ -10,7 +10,7 @@ import {Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu}
         <img src={avatar} alt="avatar.png">
         <h1><a href="/">Hua.</a></h1>
     </div>
-</nav>
+</Astronav>
 <style>
     nav {
         position: relative;
