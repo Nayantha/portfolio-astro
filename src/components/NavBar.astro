@@ -32,4 +32,15 @@ import {Astronav, MenuItems, MenuIcon} from "astro-navbar"
         border-bottom-left-radius: var(--border-bottom-radius);
         border-bottom-right-radius: var(--border-bottom-radius);
     }
+
+    nav h1:before {
+        position: absolute;
+        content: "";
+        background-color: white;
+        width: 15rem;
+        height: 0.1rem;
+        bottom: -0.5rem;
+        left: -6.5rem;
+        border-radius: 5px;
+    }
 </style>
