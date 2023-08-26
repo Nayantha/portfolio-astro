@@ -2,55 +2,17 @@
 import avatar from "/avatar.png"
 import {Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu} from "astro-navbar"
 ---
-<Astronav>
-    <svg width="250" height={4} viewBox="0 0 250 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 2L450 2" stroke="#282828" stroke-linecap="round"/>
-    </svg>
-    <div>
-        <img src={avatar} alt="avatar.png">
-        <h1><a href="./">Hua.</a></h1>
-    </div>
-    <div class="flex justify-between">
-        <a>Your Logo</a>
-        <MenuIcon class="w-4 h-4 text-gray-800"/>
-    </div>
-    <!--
-    // add `hidden` class by default for mobile
-    // `lg:flex` is to make it visible in desktop
-    // You may use custom CSS instead.
-    -->
-    <MenuItems class="hidden lg:flex">
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>
-                <Dropdown class="group">
-                    <button>
-                        <span> Services </span>
-                        <!-- You can style when dropdown is `open` -->
-                        <svg class="group-open:rotate-180">...arrow..</svg>
-                    </button>
-                    <DropdownItems>
-                        <div class="absolute top-0">
-                            <ul>
-                                <li>Menu 1</li>
-                                <li>Menu 2</li>
-                                <li>
-                                    <DropdownSubmenu>
-                                        <button>Submenu</button>
-                                        <DropdownItems>
-                                            <ul>
-                                                <li>Sub Menu 1</li>
-                                                <li>Sub Menu 2</li>
-                                            </ul>
-                                        </DropdownItems>
-                                    </DropdownSubmenu>
-                                </li>
-                            </ul>
-                        </div>
-                    </DropdownItems>
-                </Dropdown>
-            </li>
-        </ul>
-    </MenuItems>
-</Astronav>
+<nav class="relative mx-8 mb-24">
+    <Astronav>
+        <svg width="250" height={4} viewBox="0 0 250 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 2L450 2" stroke="#282828" stroke-linecap="round"/>
+        </svg>
+        <div class="flex justify-between items-center">
+            <div>
+                <img src={avatar} alt="avatar.png">
+            </div>
+            <h1 class="text-lg font-bold"><a href="./">Hua.</a></h1>
+            <MenuIcon class="w-4 h-4 text-gray-800"/>
+        </div>
+    </Astronav>
+</nav>
